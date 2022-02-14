@@ -5,20 +5,7 @@ def toBinary(number):
     if(number >= 1):
         toBinary(number // 2)
     print(number % 2, end = '')    
-
-#I will be using a while loop for this one
-def toBinaryHex(number):
-    remainder = ""
-    remains = ""
-    while(number >= 1):
-        if(number % 2 == 0):
-            remainder += "0"
-        elif(number % 2 == 1):
-            remainder += "1"
-        number /= 2
-    remains = remainder[::-1]
-    toHex(number)   
-    return remains            
+         
 
 
 def toHex(number):
