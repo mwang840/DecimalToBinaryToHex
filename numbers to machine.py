@@ -60,7 +60,7 @@ def twosCompliment(number):
             remainder += "0"
         elif(number % 2 == 1):
             remainder += "1"
-        number = int(  math.floor(number / 2)  )
+        number = int(math.ceil(number / 2))
         digit_ctr+=1
     remains = remainder[::-1]
     if(number % 2):
@@ -88,7 +88,6 @@ def splitToHex(binary):
     sums = 0
     for bin in binary:
         for non in enumerate(binary):
-            sums += math.pow(2, int(non))
             if(sums == 10):
                 hex += codes[sums - 1]
             elif(sums == 11):
